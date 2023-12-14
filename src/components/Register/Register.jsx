@@ -14,41 +14,10 @@ function Register() {
   // State variable to store registration message or error
   const [registrationMessage, setRegistrationMessage] = useState('');
 
-  // State variable to track if the user session has been loaded
-  //const [sessionLoaded, setSessionLoaded] = useState(false);
-
   // Access to navigation in React Router
   const navigate = useNavigate();
 
-  /*
-  useEffect(() => {
-    // Function to check the user's session
-    const checkSession = async () => {
-      try {
-        // Send a request to check the user's session status
-        const response = await fetch('http://localhost:5000/session', {
-          credentials: 'include', // Include cookies for authentication
-        });
-
-        // Parse the response data
-        const data = await response.json();
-        console.log('User data from session:', data);
-
-        if (data.loggedIn) {
-          // Handle the case when the user is already logged in
-          // You can add logic here if needed
-        }
-      } finally {
-        // Set sessionLoaded to true to indicate that the session check is complete
-        setSessionLoaded(true);
-      }
-    };
-
-    // Call the function to check the session when the component mounts
-    checkSession();
-  }, []);
-*/
-
+  
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
